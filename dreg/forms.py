@@ -7,7 +7,20 @@ from .models import DonorList
 class DonorRegistration(ModelForm):
     class Meta:
         model = DonorList
-        fields = '__all__'
+        fields = ('name', 
+        'gender',
+        'date_of_birth',
+        'blood_group',
+        'phone_number',
+        'email',
+        'occupation',
+        'home_address',
+        'last_donate_date',
+        'any_diseases',
+        'allergies',
+        'cardiac',
+        'bleeding_disorders',
+        'hbsAg_hcv_hIV')
         widgets = {
             'name' : forms.TextInput(attrs={'class':'form-control', 'required':'True'}),
             'gender' : forms.Select(attrs={'class':'form-control', 'required':'True'}),
